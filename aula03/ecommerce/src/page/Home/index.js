@@ -6,11 +6,11 @@ function Home(){
 
     const handleShare = (id) => {
         alert(`O produto ${id} foi compartilhado!`)
-    }
+    };
 
     const handleNotify = () => {
         alert("Você será notificado quando esse produto for vendido")
-    }
+    };    
 
     return (
         <>

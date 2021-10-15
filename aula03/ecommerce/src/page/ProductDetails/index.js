@@ -1,11 +1,18 @@
+import { useContext } from "react";
 import { useParams } from "react-router";
 import { products } from "../../products"
+import { CartContext, useCart } from "../../providers/cart";
 
 function ProductDetails(){
-
     const {id} = useParams();
 
-    let product = products.find(p => p.id === parseInt(id))
+    const {setCartProducts} = useCart()
+
+    let product = products.find(p => p.id === parseInt(id))    
+
+    const handleAddToCart = () => {
+        setCartProducts((previusState) => [...previusState, product]);
+    };
 
     return (
     <>
@@ -15,7 +22,7 @@ function ProductDetails(){
             <h3>{product.name}</h3>
             <h4>{product.price}</h4>
             <p>{product.description}</p>
-            <button>Buy</button>
+            <button onClick={handleAddToCart} >Buy</button>
         </div>
     </>
     )

@@ -1,4 +1,5 @@
 import { CartIcon, FancyButton, TopBarContainer } from "./styles";
+import { useState } from "react";
 
 function TopBar(props){
     return (
@@ -6,10 +7,10 @@ function TopBar(props){
             <a>
                 <h1>{props.title}</h1>
             </a>
-            <FancyButton >
+            <FancyButton to="/cart">
                 <i><CartIcon /></i>Checkout
             </FancyButton>
-        </ TopBarContainer>
+         </TopBarContainer>
     )
 }
 export default TopBar;

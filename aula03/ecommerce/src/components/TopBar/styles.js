@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaShoppingCart } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 export const TopBarContainer = styled.header`
   width: 100%;
@@ -17,7 +18,7 @@ export const TopBarContainer = styled.header`
   }
 `;
 
-export const FancyButton = styled.a`
+export const FancyButton = styled(Link)`
   background-color: white;
   color: #1976d2;
   padding: 8px 16px;
