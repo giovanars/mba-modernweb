@@ -22,21 +22,21 @@ function Cart(){
             <h3>Cart</h3>
 
                 {cartProducts.map(p =>  
-                    <div>
+                    <div key={p.id}>
                         <span>{p.name}</span>
                         <span>{p.price}</span>
                     </div>
                 )}           
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="name"> Name </label>
+                    <label htmlfor="name"> Name </label>
                     <input id="name" type="text" value={costumer.name} onChange={handleInput}/>
                 </div>
                 <div>
-                    <label for="address"> Address </label>
+                    <label htmlfor="address"> Address </label>
                     <input id="address" type="text" value={costumer.address} onChange={handleInput}/>
                 </div>
-                <button class="button" type="submit">Purchase</button>
+                <button type="submit">Purchase</button>
             </form>
         </>
     )

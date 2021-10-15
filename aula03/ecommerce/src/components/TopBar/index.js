@@ -1,5 +1,4 @@
 import { CartIcon, FancyButton, TopBarContainer } from "./styles";
-import { useState } from "react";
 
 function TopBar(props){
     return (
